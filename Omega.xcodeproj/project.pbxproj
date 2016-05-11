@@ -11,9 +11,13 @@
 		8B0FDD3A1CE33E5D005170E9 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0FDD391CE33E5D005170E9 /* Storyboard.storyboard */; };
 		8BA681C01CE33628007FD9AF /* Omega.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BA681BF1CE33628007FD9AF /* Omega.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BE078471CE338050063E041 /* OmegaMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE078461CE338050063E041 /* OmegaMaker.swift */; };
+		F8FACDCB0B8204051DE09A46 /* Pods_Omega.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC450674B43267AF72FF254 /* Pods_Omega.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		310297DC4C84AE738B09C1BE /* Pods-Omega.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Omega.release.xcconfig"; path = "Pods/Target Support Files/Pods-Omega/Pods-Omega.release.xcconfig"; sourceTree = "<group>"; };
+		4FC450674B43267AF72FF254 /* Pods_Omega.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Omega.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61723E4615A1915D6542873B /* Pods-Omega.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Omega.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Omega/Pods-Omega.debug.xcconfig"; sourceTree = "<group>"; };
 		8B0FDD371CE33E3F005170E9 /* OmegaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmegaViewController.swift; sourceTree = "<group>"; };
 		8B0FDD391CE33E5D005170E9 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		8BA681BC1CE33628007FD9AF /* Omega.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Omega.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8FACDCB0B8204051DE09A46 /* Pods_Omega.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +43,8 @@
 			children = (
 				8BA681BE1CE33628007FD9AF /* Omega */,
 				8BA681BD1CE33628007FD9AF /* Products */,
+				B6FD925BBE269D7B20C22A2F /* Pods */,
+				C7C63A7A8CB0886D0C70EF3C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +68,23 @@
 			path = Omega;
 			sourceTree = "<group>";
 		};
+		B6FD925BBE269D7B20C22A2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61723E4615A1915D6542873B /* Pods-Omega.debug.xcconfig */,
+				310297DC4C84AE738B09C1BE /* Pods-Omega.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C7C63A7A8CB0886D0C70EF3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FC450674B43267AF72FF254 /* Pods_Omega.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -79,10 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8BA681C41CE33628007FD9AF /* Build configuration list for PBXNativeTarget "Omega" */;
 			buildPhases = (
+				1FB6ED42ADAEA367E95F9A31 /* 📦 Check Pods Manifest.lock */,
 				8BA681B71CE33628007FD9AF /* Sources */,
 				8BA681B81CE33628007FD9AF /* Frameworks */,
 				8BA681B91CE33628007FD9AF /* Headers */,
 				8BA681BA1CE33628007FD9AF /* Resources */,
+				84A6070B53EDFCDA7031A867 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -134,6 +160,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FB6ED42ADAEA367E95F9A31 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		84A6070B53EDFCDA7031A867 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Omega/Pods-Omega-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8BA681B71CE33628007FD9AF /* Sources */ = {
@@ -241,6 +300,7 @@
 		};
 		8BA681C51CE33628007FD9AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61723E4615A1915D6542873B /* Pods-Omega.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -259,6 +319,7 @@
 		};
 		8BA681C61CE33628007FD9AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 310297DC4C84AE738B09C1BE /* Pods-Omega.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
