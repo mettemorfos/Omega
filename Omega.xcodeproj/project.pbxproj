@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0FDD381CE33E3F005170E9 /* OmegaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0FDD371CE33E3F005170E9 /* OmegaViewController.swift */; };
+		8B0FDD3A1CE33E5D005170E9 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0FDD391CE33E5D005170E9 /* Storyboard.storyboard */; };
 		8BA681C01CE33628007FD9AF /* Omega.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BA681BF1CE33628007FD9AF /* Omega.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BE078471CE338050063E041 /* OmegaMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE078461CE338050063E041 /* OmegaMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B0FDD371CE33E3F005170E9 /* OmegaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OmegaViewController.swift; sourceTree = "<group>"; };
+		8B0FDD391CE33E5D005170E9 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		8BA681BC1CE33628007FD9AF /* Omega.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Omega.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BA681BF1CE33628007FD9AF /* Omega.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Omega.h; sourceTree = "<group>"; };
 		8BA681C11CE33628007FD9AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 				8BA681BF1CE33628007FD9AF /* Omega.h */,
 				8BA681C11CE33628007FD9AF /* Info.plist */,
 				8BE078461CE338050063E041 /* OmegaMaker.swift */,
+				8B0FDD371CE33E3F005170E9 /* OmegaViewController.swift */,
+				8B0FDD391CE33E5D005170E9 /* Storyboard.storyboard */,
 			);
 			path = Omega;
 			sourceTree = "<group>";
@@ -123,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B0FDD3A1CE33E5D005170E9 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B0FDD381CE33E3F005170E9 /* OmegaViewController.swift in Sources */,
 				8BE078471CE338050063E041 /* OmegaMaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
