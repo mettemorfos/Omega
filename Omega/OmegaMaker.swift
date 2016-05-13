@@ -9,9 +9,9 @@
 import Foundation
 
 
-class OmegaMaker {
+public class OmegaMaker {
     
-    func makeBigO() {
+    public func makeBigO() {
         print("Making a BIG OMEGA")
     }
     
